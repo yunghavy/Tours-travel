@@ -5,8 +5,13 @@
 
 }
 
-.hapc {
+.image {
     width: 400px;
     height: 400px;
-    
+
 }
+.jumbo-tron {
+    background-image: url(img/carousel-1.jpg);
+}
+
+
