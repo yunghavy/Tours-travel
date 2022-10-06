@@ -17,118 +17,151 @@
       background-size: cover;
       background-repeat: no-repeat;
     }
-         /* Style inputs with type="text", select elements and textareas */
-input[type=text], select, textarea {
-  width: 100%; /* Full width */
-  padding: 12px; /* Some padding */ 
-  border: 1px solid #ccc; /* Gray border */
-  border-radius: 4px; /* Rounded borders */
-  box-sizing: border-box; /* Make sure that padding and width stays in place */
-  margin-top: 6px; /* Add a top margin */
-  margin-bottom: 16px; /* Bottom margin */
-  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+    * {
+  box-sizing: border-box;
 }
 
-/* Style the submit button with a specific background color etc */
+/* Style inputs */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
 input[type=submit] {
-  background-color: #1778e7;
+  background-color: #04AA6D;
   color: white;
   padding: 12px 20px;
   border: none;
-  border-radius: 4px;
   cursor: pointer;
 }
 
-/* When moving the mouse over the submit button, add a darker green color */
 input[type=submit]:hover {
-  background-color: #45a049;
+  background-color: #07b3e7;
 }
 
-/* Add a background color and some padding around the form */
+/* Style the container/contact section */
 .container {
   border-radius: 5px;
   background-color: #f2f2f2;
-  padding: 20px;
-} 
+  padding: 10px;
+}
 
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
 
     </style>
 
 </head>
 <body>
-     <!-- navbar-->
-     <nav class="navbar navbar-expand-lg bg-white">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index.html">Erada</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav m-lg-auto m-sm-auto">
+       <!-- navbar -->
+    <nav class="navbar navbar-light bg-light fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">ERADA</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLightNavbar" aria-controls="offcanvasLightNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end text-bg-light" tabindex="-1" id="offcanvasLightNavbar" aria-labelledby="offcanvasLightNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasLightNavbarLabel">ERADA</h5>
+            <button type="button" class="btn-close btn-close-black" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="deals.html">Deals</a>
+                <a class="nav-link" href="#deals">Deals</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="tours.html">Tours</a>
-              </li>
+                  <a class="nav-link" href="#tours">Tours</a>
+                </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="packages.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Packages
                 </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="local.html">Kenya travels</a></li>
-                  <li><a class="dropdown-item" href="East.html">Africa travels</a></li>
-                  <li><a class="dropdown-item" href="Global.html">International travels</a></li>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li><a class="dropdown-item" href="#">Kenya travels</a></li>
+                  <li><a class="dropdown-item" href="#">Africa travels</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">International travels</a></li>
                 </ul>
               </li>
-              </ul>
-              <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="signup.html">Sign up</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="login.html">Login</a>
-              </li>
             </ul>
-          
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-info" type="submit">Search</button>
+            </form>
           </div>
         </div>
-      </nav>
+      </div>
+    </nav>
+  <!-- end of navbar -->
       
       
       <!-- end of navbar -->
+<br>
+<br>
+    <h2 class="text-center mt-2">Contact Us</h2>
+      <div class="container">
+        <div style="text-align:center">
+          
+          <p>Leave us a message</p>
+        </div>
+        <div class="row">
+          <div class="column">
+            <img src="img/venuce.jpg" style="width:100%">
+            <div>
+              08122
+            </div>
+          </div>
+          <div class="column">
+            <form action="#">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="firstname" placeholder="Your name..">
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+              <label for="region">Region</label>
+              <select id="region" name="region">
+                <option value="africa">Africa</option>
+                <option value="europe">Europe</option>
+                <option value="usa">USA</option>
+                <option value="australia">Australia</option>
 
-    <!-- form -->
-    <h2 class="display-6 text-center p-4 m-4">CONTACT US</h2>
-
-    <div class="container">
-        <form action="action_page.php">
-      
-          <label for="fname">First Name</label>
-          <input type="text" id="fname" name="firstname" placeholder="Your name..">
-      
-          <label for="lname">Last Name</label>
-          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-      
-          <label for="country">Region</label>
-          <select id="country" name="country">
-            <option value="australia">Africa</option>
-            <option value="canada">Europe</option>
-            <option value="usa">Asia</option>
-            <option value="usa">America</option>
-          </select>
-      
-          <label for="subject">Subject</label>
-          <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-      
-          <input type="submit" value="Submit">
-      
-        </form>
-      </div> 
-    <!-- end of form -->
+              </select>
+              <label for="subject">Subject</label>
+              <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+              <input type="submit" value="Submit">
+            </form>
+          </div>
+        </div>
+      </div>
 
      <!-- Footer -->
      <div class="b-example-divider"></div>
@@ -140,7 +173,7 @@ input[type=submit]:hover {
            <li class="nav-item"><a href="Faqs.html" class="nav-link px-2 text-muted">FAQs</a></li>
            <li class="nav-item"><a href="contact.html" class="nav-link px-2 text-muted">Contact</a></li>
          </ul>
-         <p class="text-center text-muted">&copy; 2022 Erada, Inc</p>
+         <p class="text-center text-muted">&copy; 2022 Erada, Designed by Jaffer Kimitei</p>
          
        </footer>
      </div>

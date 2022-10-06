@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
+    <title>ABOUT US</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="main/style.css">
     <script src="js/bootstrap.js"></script>
@@ -51,52 +51,65 @@ input[type=submit]:hover {
 
 </head>
 <body>
-     <!-- navbar-->
-     <nav class="navbar navbar-expand-lg bg-white">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index.html">Erada</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav m-lg-auto m-sm-auto">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="deals.html">Deals</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="tours.html">Tours</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Packages
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="local.html">Local</a></li>
-                  <li><a class="dropdown-item" href="East.html">East Africa</a></li>
-                  <li><a class="dropdown-item" href="Global.html">International</a></li>
-                </ul>
-              </li>
-              </ul>
-              <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="signup.html">Sign up</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="login.html">Login</a>
-              </li>
-            </ul>
-          
-          </div>
+  <nav class="navbar navbar-light bg-light fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">ERADA</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLightNavbar" aria-controls="offcanvasLightNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end text-bg-light" tabindex="-1" id="offcanvasLightNavbar" aria-labelledby="offcanvasLightNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasLightNavbarLabel">ERADA</h5>
+          <button type="button" class="btn-close btn-close-black" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-      </nav>
-      
-      
-      <!-- end of navbar -->
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#deals">Deals</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#tours">Tours</a>
+              </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="packages.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Packages
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="#">Kenya travels</a></li>
+                <li><a class="dropdown-item" href="#">Africa travels</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">International travels</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-info" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <br>
+<!-- end of navbar -->
+<hr>
 
     <!-- content -->
+    <h2 class="display-5 text-bg-info">ABOUT ERADA</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet eius sint quae. Modi accusamus repellat sit itaque veniam vitae similique labore praesentium autem, delectus veritatis, fuga nihil aliquid! Dolorum, unde.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste assumenda, in dolorum incidunt explicabo culpa exercitationem accusamus recusandae ipsa libero? Ad possimus eius eligendi molestias nisi sequi tenetur rerum. Itaque.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam necessitatibus, excepturi quam voluptates nostrum, culpa veniam neque facilis optio maiores natus illum laborum accusantium ad iste. Fugiat quas accusantium recusandae.</p>
+    <hr>
+    <h2 class="display-5 text-bg-info">WHERE WE ARE</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet eius sint quae. Modi accusamus repellat sit itaque veniam vitae similique labore praesentium autem, delectus veritatis, fuga nihil aliquid! Dolorum, unde.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste assumenda, in dolorum incidunt explicabo culpa exercitationem accusamus recusandae ipsa libero? Ad possimus eius eligendi molestias nisi sequi tenetur rerum. Itaque.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam necessitatibus, excepturi quam voluptates nostrum, culpa veniam neque facilis optio maiores natus illum laborum accusantium ad iste. Fugiat quas accusantium recusandae.</p>
+
 
      <!-- Footer -->
      <div class="b-example-divider"></div>
@@ -105,11 +118,11 @@ input[type=submit]:hover {
          <ul class="nav justify-content-center border-bottom pb-3 mb-3">
            <li class="nav-item"><a href="index.html" class="nav-link px-2 text-muted">Home</a></li>
            <li class="nav-item"><a href="about.html" class="nav-link px-2 text-muted">About</a></li>
-           <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+           <li class="nav-item"><a href="Faqs.html" class="nav-link px-2 text-muted">FAQs</a></li>
            <li class="nav-item"><a href="contact.html" class="nav-link px-2 text-muted">Contact</a></li>
          </ul>
-         <p class="text-center text-muted">&copy; 2022 Erada, Inc</p>
-         <p class="float-end"><a href="#">Back to top</a></p>
+         <p class="text-center text-muted">&copy; 2022 Erada, Designed by Jaffer Kimitei</p>
+         
        </footer>
      </div>
      

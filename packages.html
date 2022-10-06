@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PACKAGES</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="main/style.css">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/jumbotron/">
+    <!-- link css -->
+    <script src="js/bootstrap.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+    
+    
+    <!-- jQuery -->
+    <script src="/path/to/cdn/jquery.slim.min.js"></script>
+
+    <!-- Bootstrap 5 -->
+    <link rel="stylesheet" href="/path/to/cdn/bootstrap.min.css" />
+    <script src="/path/to/cdn/bootstrap.bundle.min.js"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="/path/to/font-awesome/all.min.css" />
+
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/features/">
+
+    
+
+    
+
+<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+    </style>
+</head>
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">ERADA</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav m-lg-auto m-sm-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#local">Kenya Travels</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#africa">Africa Travels</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#global" >International Travels</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <!-- end of navbar -->
+
+      <!-- content -->
+      <div class="container px-4 py-5" id="custom-cards">
+        <h2 class="pb-2 border-bottom">TRAVELS</h2>
+    
+        <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+          <div class="col">
+            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('img/balii.jpg');">
+              <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Honeymoon in the forest</h3>
+                <ul class="d-flex list-unstyled mt-auto">
+                  <li class="me-auto">
+                    <img src="img/honeymoon.jpg" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+                  </li>
+                  <li class="d-flex align-items-center me-3">
+                    <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
+                    <small>Bali</small>
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
+                    <small>3days</small>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col">
+            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('img/chalbi.jpeg');">
+              <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Quad bike in the desert of Kenya</h3>
+                <ul class="d-flex list-unstyled mt-auto">
+                  <li class="me-auto">
+                    <img src="img/honeymoon.jpg" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+                   
+                  </li>
+                  <li class="d-flex align-items-center me-3">
+                    <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
+                    <small>Chalbi Desert</small>
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
+                    <small>4days</small>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col">
+            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('img/dubai.jpg');">
+              <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Sky diving in the sky</h3>
+                <ul class="d-flex list-unstyled mt-auto">
+                  <li class="me-auto">
+                    <img src="img/honeymoon.jpg" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+                    
+                  </li>
+                  <li class="d-flex align-items-center me-3">
+                    <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
+                    <small>Dubai</small>
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
+                    <small>5days</small>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <header>
+        
+        <main>
+      
+        <section class="py-5 text-center container">
+          <div class="row py-lg-5">
+            <div class="col-lg-6 col-md-8 mx-auto">
+              <h1 class="fw-light" id="local">Kenya Destinations</h1>
+              <p class="lead text-muted">Topographically, Kenya is stunning. Surrounded by calderas and mountain ranges, the Great Rift Valley divides the country. To the east of this sweeping valley, you can climb the snow-cloaked equatorial peaks of Mount Kenya and fish for trout in crystal-clear streams. Hell's Gate National Park harbors obsidian caves and hisses with natural geysers and hot springs.
+                </p>
+              <p>
+                <a href="#" class="btn btn-primary my-2">Check Costs</a>
+                <a href="#" class="btn btn-secondary my-2">Book Now</a>
+              </p>
+            </div>
+          </div>
+        </section>
+      
+        <div class="album py-5 bg-light">
+          <div class="container">
+      
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+              <div class="col">
+                <div class="card">
+                  <img src="img/kenya-amboseli.jpg" class="bd-placeholder-img card-img-top" width="100%" height="225"  preserveAspectRatio="xMidYMid slice" focusable="false">
+      
+                  <div class="card-body">
+                    <p class="card-text">Crowned by Mount Kilimanjaro, Africa's highest peak, Amboseli National Reserve is one of Kenya's most popular tourist parks. The name "Amboseli" comes from a Maasai word meaning "salty dust," an apt description for the park's parched conditions.
+                    The reserve is one of the best places in Africa to view large herds of elephants up close. Other wildlife commonly spotted in the park includes big cats, such as lion and cheetah, as well as giraffe, impala, eland, waterbuck, gazelle, and more than 600 species of birds.Nature lovers can explore five different habitats here, ranging from the dried-up bed of Lake Amboseli, wetlands with sulfur springs, savannah, and woodlands. Look for the local Maasai people who live in the area around the park.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-info">Learn more</button>
+                        <button type="button" class="btn btn-sm btn-outline-info">Schedule</button>
+                      </div>
+                      <small class="text-muted">4 days</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card shadow-sm">
+                  <img src="img/kenya-lake-nakuru-national-park.jpg" class="bd-placeholder-img card-img-top" width="100%" height="225"  preserveAspectRatio="xMidYMid slice" focusable="false">
+      
+                  <div class="card-body">
+                    <p class="card-text">Lake Nakuru National Park, in Central Kenya, is famous for its huge flocks of pink flamingos. The birds throng on Lake Nakuru itself, one of the Rift Valley soda lakes that covers almost a third of the park's area.
+                     The park was established in 1961, and more than 450 species of birds have been recorded here, as well as a rich diversity of other wildlife. Lions, leopards, warthogs, waterbucks, pythons, and white rhinos are just some of the animals you might see, and the landscapes range from sweeping grasslands bordering the lake to rocky cliffs and woodland.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-info">Learn more</button>
+                        <button type="button" class="btn btn-sm btn-outline-info">Schedule</button>
+                      </div>
+                      <small class="text-muted">3 days</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card shadow-sm">
+                  <img src="img/kenya-Maasai-mara.jpg" class="bd-placeholder-img card-img-top" width="100%" height="225"  preserveAspectRatio="xMidYMid slice" focusable="false">
+      
+                  <div class="card-body">
+                    <p class="card-text">It's named after the statuesque, red-cloaked Maasai people who live in the park and graze their animals here, as they have done for centuries. In their language, Mara means "mottled," perhaps a reference to the play of light and shadow from the acacia trees and cloud-studded skies on the vast grasslands.
+                    The park is famous for the Great Migration, when thousands of wildebeest, zebra, and Thomson's gazelle travel to and from the Serengeti, from July through October.
+                    In the Mara River, throngs of hippos and crocodiles lurk. The park is also known for providing excellent predator sightings, thanks to its relatively large populations of lion, cheetah, and leopard - especially in the dry months from December through February.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-info">Learn more</button>
+                        <button type="button" class="btn btn-sm btn-outline-info">Schedule</button>
+                      </div>
+                      <small class="text-muted">3 days</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+      
+              <div class="col">
+                <div class="card shadow-sm">
+                  <img src="img/kenya-malindi.jpg" class="bd-placeholder-img card-img-top" width="100%" height="225"  preserveAspectRatio="xMidYMid slice" focusable="false">
+      
+                  <div class="card-body">
+                    <p class="card-text">North of Mombasa on the Kenyan coast, Malindi has a split personality. This popular beach town is part historic old town, part modern tourist hub. Thanks to its rich trading history, it is also a melting pot of cultures and cuisines.
+                      Travelers, many from Europe, come here to sun on the white sands of Watamu Beach and dive the coral reefs of the Malindi and Watamu Marine National Parks. If you're looking for free things to do in Kenya, you can do worse than bask on a beautiful Malindi Beach.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-info">Learn more</button>
+                        <button type="button" class="btn btn-sm btn-outline-info">Schedule</button>
+                      </div>
+                      <small class="text-muted">4 days</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card shadow-sm">
+                  <img src="img/kenya-mount-kenya-national-park.jpg" class="bd-placeholder-img card-img-top" width="100%" height="225"  preserveAspectRatio="xMidYMid slice" focusable="false">
+      
+                  <div class="card-body">
+                    <p class="card-text">Formed by a series of volcanic eruptions, Mount Kenya is actually comprised of three glacier-cloaked peaks. The highest is Batian, although Nelion, the next highest, is a tougher climb. The lowest peak, Lenana, is considered the easiest climb, although unpredictable weather can pose challenges.Bring your camera. The striking scenery varies from glaciers, lakes, and mineral springs to alpine forest and dense pockets of bamboo.The diversity of flora and fauna provides rewarding opportunities for safaris. Among the wildlife here, you may spot black and white colobus monkeys, buffalo, elephant, tree hyrax, leopard, and hyena.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-info">Learn more</button>
+                        <button type="button" class="btn btn-sm btn-outline-info">Schedule</button>
+                      </div>
+                      <small class="text-muted">2 days</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card shadow-sm">
+                  <img src="img/kenya-top-attractions-ol-pejeta-conservancy.jpg" class="bd-placeholder-img card-img-top" width="100%" height="225"  preserveAspectRatio="xMidYMid slice" focusable="false">
+      
+                  <div class="card-body">
+                    <p class="card-text">Conservation and sustainability are key at this 90,000-acre private game reserve, where you can view the Big Five (lion, leopard, rhino, elephant, and buffalo), as well as other animals such as cheetah, hyenas, zebra, and hartebeest - all set against the breathtaking backdrop of snowcapped Mount Kenya.
+                      The conservancy is perhaps best known for its northern and southern white rhinos, including Baraka, a blind black rhino, who lucky visitors might have the chance to feed.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-info">Learn more</button>
+                        <button type="button" class="btn btn-sm btn-outline-info">Schedule</button>
+                      </div>
+                      <small class="text-muted">1 day</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+      
+              <div class="col">
+                <div class="card shadow-sm">
+                  <img src="img/kenya-top-attractions-nairobi-national-park.jpg" class="bd-placeholder-img card-img-top" width="100%" height="225"  preserveAspectRatio="xMidYMid slice" focusable="false">
+      
+                  <div class="card-body">
+                    <p class="card-text">All the classic safari stars here, including buffalo, leopard, zebras, wildebeest, hippos, elephants, and cheetah, and you can also see some of the planet's most endangered species at the park's rhino sanctuary.
+                      The Nairobi Safari Walk provides a rewarding opportunity to spot wildlife on foot, and birders will be happy to know that more than 400 species of birds also inhabit the park, including the beautiful grey crowned crane.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-info">Learn more</button>
+                        <button type="button" class="btn btn-sm btn-outline-info">Schedule</button>
+                      </div>
+                      <small class="text-muted">1 day</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card shadow-sm">
+                  <img src="img/kenya-mombasa.jpg" class="bd-placeholder-img card-img-top" width="100%" height="225"  preserveAspectRatio="xMidYMid slice" focusable="false">
+      
+                  <div class="card-body">
+                    <p class="card-text">Mombasa is actually an island connected to its mushrooming development on the mainland by a causeway, bridges, and ferries. Coral reefs fringe the coast for 480 kilometers, providing fantastic snorkeling and diving opportunities, especially at Mombasa Marine National Park and around Wasini Island. Dolphin watching and deep-sea fishing are also popular things to do in Mombasa.
+
+                      You'll find plenty of tourist attractions along the Kenyan coast here. History buffs will enjoy exploring the 16th-century Fort Jesus and Old Town with its narrow streets, ancient Swahili dwellings, markets, and souvenir shops.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-info">Learn more</button>
+                        <button type="button" class="btn btn-sm btn-outline-info">Schedule</button>
+                      </div>
+                      <small class="text-muted">3 days</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card shadow-sm">
+                  <img src="img/kenya-top-attractions-david-sheldrick-wildlife-trust-elephant-nursery.jpg" class="bd-placeholder-img card-img-top" width="100%" height="225"  preserveAspectRatio="xMidYMid slice" focusable="false">
+      
+                  <div class="card-body">
+                    <p class="card-text">This famous wildlife sanctuary rescues and rehabilitates orphaned elephants and offers you the chance to see these lovable creatures up close. This is where the youngest elephants are hand-reared until about two or three years of age, and you can watch the keepers bottle-feed the babies.
+
+                      From the sanctuary, staff relocate the elephants to a reintegration center in Tsavo East National Park before they are eventually released back into the wild</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-info">Learn more</button>
+                        <button type="button" class="btn btn-sm btn-outline-info">Schedule</button>
+                      </div>
+                      <small class="text-muted">1 day</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+      </main>
+       <!-- Jumbotron -->
+       <div class="container">
+       <div class="row align-items-md-stretch">
+        <h2 class="fw-normal text-center">October and Christmas Deals!</h2>
+        <div class="col-md-6">
+            <div class="jumbotron h-100 p-5 text-bg-dark rounded-3" style="background-image: url(img/paris.jpg); background-size: 100%;">
+            <h2>PARIS</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque deleniti commodi numquam ipsam, laboriosam tempore itaque quo molestias illum doloremque laudantium adipisci ex consequatur aliquid sequi laborum voluptates nesciunt non.</p>
+            <button class="btn btn-outline-light" type="button">Click here</button>
+            
+          </div>
+          </div>
+          <div class="col-md-6">
+            <div class="jumbotron h-100 p-5 text-bg-dark rounded-3" style="background-image: url(img/vegas.jpg); background-size: 100%;">
+              <h2>LAS VEGAS</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima atque minus eos delectus similique magni quod dolorum laboriosam, nihil eaque porro quaerat, ex tempora! Exercitationem voluptatibus placeat nihil libero quos!</p>
+              <button class="btn btn-outline-light" type="button">Click here</button>
+          </div>
+          </div>
+          </div>
+          </div>
+          </div>
+        </div>
+        <main>
+      
+          <section class="py-5 text-center container">
+            <div class="row py-lg-5">
+              <div class="col-lg-6 col-md-8 mx-auto">
+                <h1 class="fw-light" id="africa">Africa Destinations</h1>
+                <p class="lead text-muted">Africa is one of the best travel destinations in the world. Here, you can enjoy crystal blue beaches, majestic wildlife, and a wealth of culture and history.</p>
+                <p>
+                  <a href="#" class="btn btn-primary my-2">Check Costs</a>
+                  <a href="#" class="btn btn-secondary my-2">Book Now</a>
+                </p>
+              </div>
+            </div>
+          </section>
+        
+          <div class="album py-5 bg-light">
+            <div class="container">
+        
+              <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <div class="col">
+                  <div class="card">
+                     <img src="img/Botswana.jpg" class="bd-placeholder-img card-img-top" width="100%" height="225"  preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <div class="card-body">
+                      <p class="card-text">If you're looking for a great safari getaway, Botswana is the perfect destination to visit. Bordered by South Africa, Namibia, and Zimbabwe, Botswana is home to the Okavango Delta. The delta is one of the most sought after wilderness destinations in the world. Its location is in the Kalahari Basin. Here you can experience an array of wildlife and vegetation.</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-info">Learn more</button>
+                          <button type="button" class="btn btn-sm btn-outline-info">Schedule</button>
+                        </div>
+                        <small class="text-muted">9 days</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card shadow-sm">
+                    <img src="img/Diani-Kenya.jpg" class="bd-placeholder-img card-img-top" width="100%" height="225"  preserveAspectRatio="xMidYMid slice" focusable="false">
+                      <div class="card-body">
+                      <p class="card-text">Kenya is an ideal destination for family holidays, safaris, and beach holidays. The best time to visit is between October and March.At Malindi and Watamu, you can explore the diversity of marine life nestled in coral reefs. You can also enjoy bird watching at Lake Nakuru. Amboseli National Park is a fantastic place to visit if you love wildlife. You can also enjoy the stunning view of Mount Kilimanjaro.</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-info">Learn more</button>
+                          <button type="button" class="btn btn-sm btn-outline-info">Schedule</button>
+                        </div>
+                        <small class="text-muted">8 days</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card shadow-sm">
+                    <img src="img/Lesotho.jpg" class="bd-placeholder-img card-img-top" width="100%" height="225"  preserveAspectRatio="xMidYMid slice" focusable="false">
+        
+                    <div class="card-body">
+                      <p class="card-text">Lesotho is the perfect destination for a nature retreat. You can immerse yourself in the majestic Maloti Mountains, and see the best wildlife. Adventure lovers can enjoy a ski trip during the country's winter season.The Ts'enhlanyane National Park is a scenic park that has an array of wildlife, birds, and flora. Its location is at the foot of the Holomo Pass at the Maloti Mountains.</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-info">Learn more</button>
+                          <button type="button" class="btn btn-sm btn-outline-info">Schedule</button>
+                        </div>
+                        <small class="text-muted">5 days</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+        
+                <div class="col">
+                  <div class="card shadow-sm">
+                    <img src="img/Morocco.jpg" class="bd-placeholder-img card-img-top" width="100%" height="225"  preserveAspectRatio="xMidYMid slice" focusable="false">
+                      <div class="card-body">
+                      <p class="card-text">Travelers describe Morocco as a country that has an African and European feel to it. It has a mixture of North African and European culture because of its proximity to Europe. To experience authentic Moroccan culture, you must visit the Djemma el Fna market. Its location is in Marrakesh's Medina quarter. Djemma el Fna is a shopper's paradise where you can purchase anything from fashion to artworks. You can also enjoy authentic Moroccan cuisine sold at the food stalls.</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-info">Learn more</button>
+                          <button type="button" class="btn btn-sm btn-outline-info">Schedule</button>
+                        </div>
+                        <small class="text-muted">9 days</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card shadow-sm">
+                    <img src="img/Reunion-Island.jpg" class="bd-placeholder-img card-img-top" width="100%" height="225"  preserveAspectRatio="xMidYMid slice" focusable="false">
+        
+                    <div class="card-body">
+                      <p class="card-text">Nestled in the warm Indian Ocean, Reunion Island is a beautiful African paradise. The first thing to know is that the island has an active volcano called the Piton de la Fournaise. The activity of the volcano has created lush vegetation that attracts unique wildlife. Hiking is a great way to explore the island, and there are tons of trails available. If you're a diver, you'll enjoy exploring the diversity of marine life in the island's waters.</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-info">Learn more</button>
+                          <button type="button" class="btn btn-sm btn-outline-info">Schedule</button>
+                        </div>
+                        <small class="text-muted">9 days</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card shadow-sm">
+                    <img src="img/Rwanda.jpg" class="bd-placeholder-img card-img-top" width="100%" height="225"  preserveAspectRatio="xMidYMid slice" focusable="false">
+        
+                    <div class="card-body">
+                      <p class="card-text">You can enjoy great water activities at Lake Kivu. It is Rwanda's largest lake and the sixth largest lake in Africa. Boat tours, kayaking, and fishing are available at the lake.If you're a tea or coffee lover, Rwanda is the place to enjoy these hot beverages. Explore tea farms and learn more about this industry by going on a tea plantation tour. You can book these tours through travel agents or Rwanda Tourism.</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-info">Learn more</button>
+                          <button type="button" class="btn btn-sm btn-outline-info">Schedule</button>
+                        </div>
+                        <small class="text-muted">8 days</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+        
+                <div class="col">
+                  <div class="card shadow-sm">
+                    <img src="img/Seychelles.jpg" class="bd-placeholder-img card-img-top" width="100%" height="225"  preserveAspectRatio="xMidYMid slice" focusable="false">
+        
+                    <div class="card-body">
+                      <p class="card-text">If you're planning a romantic getaway or a wellness retreat, be sure to head to Seychelles. The island-nation consists of 115 islands located in the Indian Ocean. The outer islands of Seychelles offer beautiful beaches and an array of wildlife. The main ones are Alphonse and Desroches. 
+                      </p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-info">Learn more</button>
+                          <button type="button" class="btn btn-sm btn-outline-info">Schedule</button>
+                        </div>
+                        <small class="text-muted">4 days</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card shadow-sm">
+                    <img src="img/South-Africa.jpg" class="bd-placeholder-img card-img-top" width="100%" height="225"  preserveAspectRatio="xMidYMid slice" focusable="false">
+        
+                    <div class="card-body">
+                      <p class="card-text">South Africa accommodates all types of travelers. From city getaways to safaris and beach holidays, the country is an ideal destination.
+                        You can enjoy the natural beauty of the iSimangaliso Wetlands Park in KwaZulu-Natal. An interesting fact is that the park is home to Africa's most extensive estuarine system.</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-info">Learn more</button>
+                          <button type="button" class="btn btn-sm btn-outline-info">Schedule</button>
+                        </div>
+                        <small class="text-muted">6 days</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card shadow-sm">
+                    <img src="img/Zanzibar.jpg" class="bd-placeholder-img card-img-top" width="100%" height="225"  preserveAspectRatio="xMidYMid slice" focusable="false">
+        
+                    <div class="card-body">
+                      <p class="card-text">Zanzibar is one of Africa's island paradises. You'll enjoy crystal clear waters and great food on the island. There are tons of other islands around the archipelago that you can explore.
+
+                        You'll need a visa to enter Tanzania, either from the Tanzanian consulate or on arrival, at the cost of $50</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-info">Learn more</button>
+                          <button type="button" class="btn btn-sm btn-outline-info">Schedule</button>
+                        </div>
+                        <small class="text-muted">3 days</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- carousel -->
+
+<section class="row mb-4 p-4">
+  <div class="col-6">
+    <h2 class="fw-normal text-center m-sm-5">Popular Hotels in Dubai</h2>
+<div id="myCarousel" class="carousel slide bg-inverse w-75 ms-auto me-auto" data-bs-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
+    <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
+    <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
+    <li data-bs-target="#myCarousel" data-bs-slide-to="3"></li>
+    <li data-bs-target="#myCarousel" data-bs-slide-to="4"></li>
+    <li data-bs-target="#myCarousel" data-bs-slide-to="5"></li>
+    <li data-bs-target="#myCarousel" data-bs-slide-to="6"></li>
+  </ol>
+  <div class="carousel-inner" role="listbox">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="img/rove downtown.jpg" alt="First slide" width="500px" height="400px">
+      <div class="carousel-caption">
+        <h3 class="">ROVE DOWNTOWN</h3>
+        <p>From Kshs.20,934</p>
+          </div>
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="img/maquis.jpg" alt="Second slide" width="500px" height="400px">
+      <div class="carousel-caption">
+        <h3>JW MARIOTT MARQUIS</h3>
+        <p>From Kshs.33,034</p>
+         </div>
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="/img/Intercontiental.jpg" alt="Third slide" width="500px" height="400px">
+      <div class="carousel-caption">
+        <h3>INTERCONTINENTAL</h3>
+        <p>From Kshs.23,006</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="/img/anantara the palm.jpg" alt="fourth slide" width="500px" height="400px">
+      <div class="carousel-caption">
+        <h3>ANANTARA THE PALM</h3>
+        <p>From Kshs.44,003</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="/img/five-palm-jumeirah-dubai.jpg" alt="fifth slide" width="500px" height="400px">
+      <div class="carousel-caption">
+        <h3>FIVE PALM JUMEIRAH</h3>
+        <p>From Kshs.43,034</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="/img/grand-hyatt-dubai.jpg" alt="sixth slide" width="500px" height="400px">
+      <div class="carousel-caption">
+        <h3>GRAND HYATT</h3>
+        <p>From Kshs.26,034</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="/img/four-points-by-sheraton.jpg" alt="seventh slide" width="500px" height="400px">
+      <div class="carousel-caption">
+        <h3>FOUR PONTS BY SHERATON</h3>
+        <p>From Kshs.29,034</p>
+      </div>
+    </div>
+    
+  </div>
+  <div>
+    <button class="btn btn-outline-primary justify-content-end" type="button">Learn more</button>
+  </div>
+  </div>
+    </div>
+  </section>
+</main>
+
+  <!-- end carousel -->
+  <section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light" id="global"> International Destinations</h1>
+        <p class="lead text-muted">Springtime really is the perfect time to get away. Not only does this transitional season bring the ideal mild weather for sightseeing in many destinations, but there are also many festivals and fairs to immerse yourself in local culture. Fewer crowds and blooming flowers are just icing on the cake.</p>
+        <p>
+          <a href="#" class="btn btn-primary my-2">Check Costs</a>
+          <a href="#" class="btn btn-secondary my-2">Book Now</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="album py-5 bg-light">
+    <div class="container">
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col">
+          <div class="card">
+            <img src="img/barcelona.jpg" class="bd-placeholder-img card-img-top" width="100%" height="225"  preserveAspectRatio="xMidYMid slice" focusable="false">
+
+            <div class="card-body">
+              <p class="card-text">Barcelona is one of the most picturesque must-visit cities in the world. It is located on the eastern coastline of Spain on the Mediterranean Sea and is an amazing beach town. Apart from its unique architectural style, Barcelona has pleasant eather, museums, delicious food and friendly locals. While all the beaches have golden sand and sparkling waters, each has a different vibe. Home to the famous Barcelona FC, football fans can visit Barcelona's Camp No to watch the Barça boys work their magic.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-info">Learn more</button>
+                  <button type="button" class="btn btn-sm btn-outline-info">Schedule</button>
+                </div>
+                <small class="text-muted">7 days</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="img/Rome.jpg" class="bd-placeholder-img card-img-top" width="100%" height="225"  preserveAspectRatio="xMidYMid slice" focusable="false">
+
+            <div class="card-body">
+              <p class="card-text">Rome is one of the best tourist places in the world to visit due to its archaeological and art treasures, its beautiful panoramic views and its magnificent 'villas'(parks). It has some world-famous places to visit such as the Colosseum and St Peter's Basilica. The Colosseum, inaugurated in 80 AD, is the largest amphitheatre built during the Roman Empire. It hosted gladiator fights, executions and animal hunts. Trevi Fountain is one of Italy's most famous places, designed by Nicola Salvi at the junction of three streets. </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-info">Learn more</button>
+                  <button type="button" class="btn btn-sm btn-outline-info">Schedule</button>
+                </div>
+                <small class="text-muted">14 days</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="img/great barrier reef.jpg" class="bd-placeholder-img card-img-top" width="100%" height="225"  preserveAspectRatio="xMidYMid slice" focusable="false">
+
+            <div class="card-body">
+              <p class="card-text">The Great Barrier Reef is a World Heritage-listed natural wonder and one of the largest living structures on the planet that can be seen from outer space. It is one of Australia's most loved attractions with over 100 beautiful islands The snorkelling and diving opportunities are the best in the world, with rainbow-coloured corals and fascinating marine life. A tourist can enjoy whale watching, swimming with the dolphins, snorkelling, scuba diving, aircraft or helicopter tours, bare boats (self-sail), glass-bottomed boat viewing, semi-submersibles and cruise ship tours</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-info">Learn more</button>
+                  <button type="button" class="btn btn-sm btn-outline-info">Schedule</button>
+                </div>
+                <small class="text-muted">6 days</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="img/iceland.jpg" class="bd-placeholder-img card-img-top" width="100%" height="225"  preserveAspectRatio="xMidYMid slice" focusable="false">
+
+            <div class="card-body">
+              <p class="card-text">Iceland, the island of fire and ice, is one of the world's best tourist places for both, tourists pursuing excitement,a s well as nature lovers. From watching the northern lights to taking a plunge in a geothermal pool surrounded by volcanic landscapes, Iceland's natural environment is gorgeous. With glaciers, geysers and wildlife-watching opportunities, Iceland is one of the must-visit places in the world. Due to its location atop the junction of the North American and Eurasian tectonic plates, it has a lot of geothermal activity. There are various places for whale watching throughout the country.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-info">Learn more</button>
+                  <button type="button" class="btn btn-sm btn-outline-info">Schedule</button>
+                </div>
+                <small class="text-muted">17 days</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="img/Santorini.jpg" class="bd-placeholder-img card-img-top" width="100%" height="225"  preserveAspectRatio="xMidYMid slice" focusable="false">
+
+            <div class="card-body">
+              <p class="card-text">Santorini is the most famous of all Greek islands and the number one summer destination in the world. Santorini is one of the Cyclades islands nestled in the Aegean Sea. Spectacular sunsets, traditional whitewashed houses and the breathtaking sights of the ocean make this island the best place for tourists to visit. Santorini has inviting beaches, old castles, ancient ruins, stark volcanic countryside and small fishing ports. A tourist must not miss the Bella Aurora and Thalassa cruise, views from the Skaros Rock, sunsets at Amoudi Bay, exhibits at the Museum of Prehistoric Thera, murals at Lignos Folklore Museum and sailing in Santorini.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-info">Learn more</button>
+                  <button type="button" class="btn btn-sm btn-outline-info">Schedule</button>
+                </div>
+                <small class="text-muted">3 days</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="img/Rio de janeiro.jpg" class="bd-placeholder-img card-img-top" width="100%" height="225"  preserveAspectRatio="xMidYMid slice" focusable="false">
+
+            <div class="card-body">
+              <p class="card-text">Rio de Janeiro is one of the most visited cities in the world, famous for its Carnival, sultry bossa nova and beaches. Christ the Redeemer is one of the most famous attractions here. The view of the city from the top of Corcovado Hill, where the giant Christ statue stands, is remarkable. The statue is 38 metres high, made in the art deco style. Another tourist attraction in Rio de Janeiro is Sugarloaf Mountain situated at the mouth of the Guanabara Bay. Several hundred meters above the harbour, you can see the panoramic views of the city, the Botafogo Cave and the Guanabara Bay. </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-info">Learn more</button>
+                  <button type="button" class="btn btn-sm btn-outline-info">Schedule</button>
+                </div>
+                <small class="text-muted">14 days</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="img/new zealand.jpg" class="bd-placeholder-img card-img-top" width="100%" height="225"  preserveAspectRatio="xMidYMid slice" focusable="false">
+
+            <div class="card-body">
+              <p class="card-text">New Zealand is one of the most sought-after tourist places in the world with snow-capped mountains, glaciers and hills. New Zealand lies to the southwest of the Pacific Ocean and has breath-taking landscapes decked with picturesque coastlines and mountains. New Zealand has various adventure activities, museums, art galleries and heritage sites to visit. It comprises two main islands - North Island and South Island - and has more than 700 smaller islands, covering 2,68,021 square kilometres.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-info">Learn more</button>
+                  <button type="button" class="btn btn-sm btn-outline-info">Schedule</button>
+                </div>
+                <small class="text-muted">17 days</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- modal -->
+        
+        <!-- end of modal -->
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="img/newyork.jpg" class="bd-placeholder-img card-img-top" width="100%" height="225"  preserveAspectRatio="xMidYMid slice" focusable="false">
+
+            <div class="card-body">
+              <p class="card-text">New York City, USA is a world-famous tourist place, a cultural hub, a shopping paradise, a haven for artists and a culinary hotspot. Worth visiting are the Statue of Liberty (305 ft tall), the Empire State Building, Times Square, Brooklyn Bridge and various museums. The American Museum of Natural History features exhibits from dinosaur skeletons to historical human artefacts. Do visit Central Park, which spans over 800 acres and is skirted by skyscrapers and enjoy delicious candies at Hershey's Chocolate World</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-info">Learn more</button>
+                  <button type="button" class="btn btn-sm btn-outline-info">Schedule</button>
+                </div>
+                <small class="text-muted">15 days</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="img/prague.jpg" class="bd-placeholder-img card-img-top" width="100%" height="225"  preserveAspectRatio="xMidYMid slice" focusable="false">
+
+            <div class="card-body">
+              <p class="card-text">Prague is known for its architecture, museums, nightlife, beer and amazing shopping options. Also called 'the city of a Hundred Spires,'' it is known for its Old Town Square with colourful Baroque buildings, Gothic churches and a medieval astronomical clock. A tourist can enjoy Prague's cosmopolitan and historic sights, world-renowned castles and bridges and experience the Danube River. Charles Bridge, one of the best places to visit in Prague, must be on top of Prague visitors' must-see list.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-info">Learn more</button>
+                  <button type="button" class="btn btn-sm btn-outline-info">Schedule</button>
+                </div>
+                <small class="text-muted">7 days</small>
+              </div>
+            </div>
+          </div>S
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- Footer -->
+    <div class="b-example-divider"></div>
+    <div class="container">
+      <footer class="py-3 my-4">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+          <li class="nav-item"><a href="index.html" class="nav-link px-2 text-muted">Home</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link px-2 text-muted">About</a></li>
+          <li class="nav-item"><a href="Faqs.html" class="nav-link px-2 text-muted">FAQs</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link px-2 text-muted">Contact</a></li>
+        </ul>
+        <p class="text-center text-muted">&copy; 2022 Erada, Designed by Jaffer Kimitei</p>
+        <p class="float-end"><a href="#">Back to top</a></p>
+      </footer>
+    </div>
+    
+    <div class="b-example-divider"></div>
+    
+    <div class="container">
+      <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+        <div class="col mb-3">
+          <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
+            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+          </a>
+          <!-- <p class="text-muted">&copy; 2022</p> -->
+        </div>
+            <!-- end of footer -->
+
+      
+</body>
+</html>
