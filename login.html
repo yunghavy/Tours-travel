@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign in</title>
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="main/style.css">
+    <link rel="stylesheet" href="../static/css/bootstrap.css">
+    <link rel="stylesheet" href="../static/css/style.css">
     <!-- javascript -->
-    <script src="js/bootstrap.js"></script>
+    <script src="../static/js/bootstrap.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
 
@@ -183,7 +183,7 @@ button.social-signin.google {
     <!-- navbar -->
     <nav class="navbar navbar-light bg-light fixed-top">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">ERADA</a>
+          <a class="navbar-brand" href="/">ERADA</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLightNavbar" aria-controls="offcanvasLightNavbar">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -195,7 +195,7 @@ button.social-signin.google {
             <div class="offcanvas-body">
               <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                  <a class="nav-link active" aria-current="page" href="/">Home</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#deals">Deals</a>
@@ -226,20 +226,18 @@ button.social-signin.google {
         </div>
       </nav>
     <!-- end of navbar -->
+    <form action="/login" method="post">
     <div id="login-box">
         <div class="left">
           <h1>Log in</h1>
-          
-          <input type="text" name="username" placeholder="Username" />
+
           <input type="text" name="email" placeholder="E-mail" />
           <input type="password" name="password" placeholder="Password" />
-          
-          
-          <input type="submit" name="login_submit" value="Login" />
+            <input type="submit" name="login_submit" value="Login" />
         </div>
         
         <div class="right">
-          <span class="loginwith">Sign in with<br />social network</span>
+          <span class="login with">Sign in with<br />social network</span>
           
           <button class="social-signin facebook">Log in with facebook</button>
           <button class="social-signin twitter">Log in with Twitter</button>
@@ -247,5 +245,6 @@ button.social-signin.google {
         </div>
         <div class="or">OR</div>
       </div>
+</form>
 </body>
 </html>

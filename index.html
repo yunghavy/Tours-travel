@@ -5,12 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Travel Now</title>
     <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="main/style.css">
+    <link rel="stylesheet" href="{{url_for('static', filename = 'css/style.css')}}">
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/jumbotron/">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
     <!-- link css -->
     <!-- Bootstrap 5 -->
     <link rel="stylesheet" href="/path/to/cdn/bootstrap.min.css" />
+    <style>
+        img{
+          height: 350px;
+        }
+       </style>
+
+    <script>
+        function logout(){
+        alert("Are You Sure You want to Log out")
+        }
+    </script>
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="/path/to/font-awesome/all.min.css" />
@@ -21,12 +32,6 @@
  <script src="/path/to/cdn/jquery.slim.min.js"></script>
    <script src="/path/to/cdn/bootstrap.bundle.min.js"></script>
    <script src="js/bootstrap.js"></script>
-    
-    <style>
-        img{
-          height: 350px;
-        }
-       </style>
 
 
     
@@ -36,14 +41,14 @@
     <!-- navbar-->
     <nav class="navbar navbar-expand-lg bg-white">
         <div class="container-fluid">
-          <a class="navbar-brand" href="index.html">Erada</a>
+          <a class="navbar-brand" href="/">Erada</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav m-lg-auto m-sm-auto">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#deals">Deals</a>
@@ -63,19 +68,33 @@
               </li>
               </ul>
               <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="signup.html">Sign up</a>
+                {% if 'key' not in session %}
+                    <li class="nav-item">
+                <a class="nav-link" href="/login">Login</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="/signup">Sign up</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="login.html">Login</a>
+                {% endif %}
+                {% if 'key' in session %}
+                 <li class="nav-item">
+                <a class="nav-link" href="/logout">Log out</a>
               </li>
+                {% endif %}
+              {% if session['user_id'] == 1 %}
+              </li> <li class="nav-item">
+                <a class="nav-link" href="/admin">Admin</a>
+              </li>
+                {% endif %}
             </ul>
           
           </div>
         </div>
       </nav>
       <marquee direction="right">ERADA TRAVEL NOW, BOOK & SCHEDULE YOUR TRIPS</marquee>
-     
+    <h3 class="title">
+      Welcome {{ username }}
+    </h3>
       
       <!-- end of navbar -->
       
@@ -93,43 +112,43 @@
         </ol>
         <div class="carousel-inner" role="listbox">
           <div class="carousel-item active">
-            <img class="d-block w-100" src="img/Western Cape.jpg" alt="First slide">
+            <img class="d-block w-100" src="../static/images/Western Cape.jpg" alt="First slide">
             <div class="carousel-caption">
               <h3 class="">WESTERN CAPE</h3>
               <p>This is the first slide.</p>
-              <a href="booking.html" target="_blank" button type="button" class="button btn btn-primary">Book Now</a>
+              <a href="/booking" target="_blank"  type="button" class="button btn btn-primary">Book Now</a>
             </div>
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100" src="img/masai mara.jpg" alt="Second slide">
+            <img class="d-block w-100" src="../static/images/masai mara.jpg" alt="Second slide">
             <div class="carousel-caption">
               <h3>MAASAI MARA</h3>
               <p>This is the second slide.</p>
-              <a href="booking.html" target="_blank" button type="button" class="button btn btn-primary">Book Now</a>
+              <a href="/booking" target="_blank"  type="button" class="button btn btn-primary">Book Now</a>
             </div>
           </div>
                   <div class="carousel-item">
-                 <img class="d-block w-100" src="/img/Amboseli.jpg" alt="Fourth slide">
+                 <img class="d-block w-100" src="../static/images/Amboseli.jpg" alt="Fourth slide">
                  <div class="carousel-caption">
                 <h3>AMBOSELI</h3>
               <p>This is the third slide.</p>
-              <a href="booking.html" target="_blank" button type="button" class="button btn btn-primary">Book Now</a>
+              <a href="/booking" target="_blank"  type="button" class="button btn btn-primary">Book Now</a>
             </div>
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100" src="/img/taj.jpg" alt="Fourth slide">
+            <img class="d-block w-100" src="../static/images/taj.jpg" alt="Fourth slide">
             <div class="carousel-caption">
               <h3>TAJ MAHAL</h3>
               <p>This is the third slide.</p>
-              <a href="booking.html" target="_blank" button type="button" class="button btn btn-primary">Book Now</a>
+              <a href="/booking" target="_blank"  type="button" class="button btn btn-primary">Book Now</a>
             </div>
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100" src="/img/borabora.jpg" alt="Fifth slide">
+            <img class="d-block w-100" src="../static/images/borabora.jpg" alt="Fifth slide">
             <div class="carousel-caption">
               <h3>Bora Bora</h3>
               <p>This is the third slide.</p>
-              <a href="booking.html" target="_blank" button type="button" class="button btn btn-primary">Book Now</a>
+              <a href="/booking" target="_blank"  type="button" class="button btn btn-primary">Book Now</a>
             </div>
           </div>
         </div>
@@ -150,20 +169,20 @@
     <h2 class="fw-normal text-center m-sm-5">Popular Kenyan Destinations</h2>
     <div class="brighten row m-md-3 m-sm-3">
       <div class="col-lg-4 text-center">
-    <img src="img/ke1.jpg" class="image" alt="">
+    <img src="../static/images/ke1.jpg" class="image" alt="">
         <div class="overlay">Fourteen Falls</div>
         <p><a class="btn btn-primary" href="modal-one">Schedule a trip &raquo;</a></p>
       </div>
     
 
       <div class="col-lg-4 text-center">
-       <img src="img/hellsgate.jpg" class="image" alt="">
+       <img src="../static/images/hellsgate.jpg" class="image" alt="">
         <div class="overlay">Hell's Gate</div>
         <p><a class="btn btn-primary" href="#">Schedule a trip &raquo;</a></p>
       </div>
 
       <div class="col-lg-4 text-center">
-       <img src="img/fortjesus.jpeg" class="image" alt="">
+       <img src="../static/images/fortjesus.jpeg" class="image" alt="">
         <div class="overlay">Fort Jesus</div>
         <p><a class="btn btn-primary" href="#">Schedule a trip &raquo;</a></p>
       </div>
@@ -172,25 +191,25 @@
 
         <div class="brighten row m-md-3 m-sm-3">
           <div class="col-lg-4 text-center">
-            <img src="img/hellskitchen.jpeg" class="image" alt="">
+            <img src="../static/images/hellskitchen.jpeg" class="image" alt="">
             <div class="overlay">Hell's Kitchen</div>
             <p><a class="btn btn-primary" href="#">Schedule a trip &raquo;</a></p>
           </div>
 
           <div class="col-lg-4 text-center">
-            <img src="img/Nairobi National Park_0_0.jpg" class="image" alt="">
+            <img src="../static/images/Nairobi National Park_0_0.jpg" class="image" alt="">
             <div class="overlay">Nairobi National Park</div>
             <p><a class="btn btn-primary" href="#">Schedule a trip &raquo;</a></p>
           </div>
 
           <div class="col-lg-4 text-center">
-            <img src="img/chalbi.jpeg" class="image" alt="">
+            <img src="../static/images/chalbi.jpeg" class="image" alt="">
             <div class="overlay">Chalbi Desert</div>
             <p><button class="btn btn-primary" id="myBtn">Schedule a trip &raquo;</button></p>
             </div>
           </div>
        </div>
-        </div>
+
         
 
 
@@ -200,7 +219,7 @@
         <div class="row align-items-md-stretch">
             <h2 class="fw-normal text-center">Flash Sales & Black Friday deals</h2>
             <div class="col-md-6">
-                <div class="jumbotron h-100 p-5 text-bg-dark rounded-3" style="background-image: url(img/dubai.jpg); background-size: 100%;">
+                <div class="jumbotron h-100 p-5 text-bg-dark rounded-3" style="background-image: url(../static/images/dubai.jpg); background-size: 100%;">
                 <h2>DUBAI</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque deleniti commodi numquam ipsam, laboriosam tempore itaque quo molestias illum doloremque laudantium adipisci ex consequatur aliquid sequi laborum voluptates nesciunt non.</p>
                 <button class="btn btn-outline-light" type="button">Click here</button>
@@ -208,7 +227,7 @@
               </div>
 
               <div class="col-md-6">
-                <div class="jumbotron h-100 p-5 text-bg-dark rounded-3" style="background-image: url(img/coast.jpg); background-size: 100%;">
+                <div class="jumbotron h-100 p-5 text-bg-dark rounded-3" style="background-image: url(../static/images/coast.jpg); background-size: 100%;">
                   <h2>LAMU</h2>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima atque minus eos delectus similique magni quod dolorum laboriosam, nihil eaque porro quaerat, ex tempora! Exercitationem voluptatibus placeat nihil libero quos!</p>
                   <button class="btn btn-outline-light" type="button">Click here</button>
@@ -216,7 +235,7 @@
               </div>
               </div>
               </div>
-              </div>
+
               
 
     
@@ -228,12 +247,12 @@
  <div class="color row featurette">
    <div class="col-md-7">
      <h2 class="featurette-heading fw-normal lh-1">Travel to Petra in Jordan <span class="text-muted">It'll blow your mind.</span></h2>
-     <p class="lead">The spectacular carved rock tombs of Petra in Jordan often top travel wishlists. But unlike many dream destinations, it's actually fairly easy and not too expensive to visit Petra. There's accommodation from tented camps to five-star resorts, there's good public transport or it's simple to drive yourself, it's safe and the people are incredibly welcoming.
+     <p class="lead">The spectacular carved rock tombs of Petra in Jordan often top travel wishlists. But unlike many dream destinations, it's actually fairly easy and not too expensive to visit Petra. There's accommodation from tented camps to five-star resorts, there's good public transport, or it's simple to drive yourself, it's safe and the people are incredibly welcoming.
 
       So if you want to visit Petra, which is the best way to do it? While plenty of companies offer organised tours, it's also an easy place to visit independently. Here's everything you need to know when planning a trip to Petra - including how to get there, the closest hotels, best times to visit and even the best places for a drink after a long day exploring</p>
    </div>
    <div class="col-md-5">
-     <img src="img/machu picchu.jpg" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500"  preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">Petra</text></svg>
+     <img src="../static/images/machu picchu.jpg" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500"  preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em">Petra</text>
 
    </div>
  </div>
@@ -246,7 +265,7 @@
      <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem inventore laudantium culpa necessitatibus ullam ab placeat minus commodi maiores, laborum, aspernatur nihil voluptas. Repellat quidem dolorum provident blanditiis molestiae recusandae!</p>
    </div>
    <div class="col-md-5 order-md-1">
-    <img src="img/Florida.jpg" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">Florida</text></svg>
+    <img src="../static/images/Florida.jpg" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em">Florida</text>
 
    </div>
  </div>
@@ -259,7 +278,7 @@
      <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem inventore laudantium culpa necessitatibus ullam ab placeat minus commodi maiores, laborum, aspernatur nihil voluptas. Repellat quidem dolorum provident blanditiis molestiae recusandae!</p>
    </div>
    <div class="col-md-5">
-    <img src="img/pexels-craig-adderley-3411132.jpg" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500"  preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">Disney World</text></svg>
+    <img src="../static/images/pexels-craig-adderley-3411132.jpg" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500"  preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em">Disney World</text>
 
    </div>
  </div>
@@ -268,7 +287,7 @@
 
  <!-- /END THE FEATURETTES -->
 </div>
-</div>
+
 <!-- /.container -->
 
 
@@ -277,7 +296,7 @@
 <section class="row mb-4 p-4">
   <div class="col-6">
     <h2 class="fw-normal text-center m-sm-5">Popular International Destinations</h2>
-<div id="myCarousel" class="carousel slide bg-inverse w-75 ms-auto me-auto" data-bs-ride="carousel">
+<div id="myCarousel2" class="carousel slide bg-inverse w-75 ms-auto me-auto" data-bs-ride="carousel">
   <ol class="carousel-indicators">
     <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
     <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
@@ -289,49 +308,49 @@
   </ol>
   <div class="carousel-inner" role="listbox">
     <div class="carousel-item active">
-      <img class="d-block w-100" src="img/maldives.jpg" alt="First slide">
+      <img class="d-block w-100" src="../static/images/maldives.jpg" alt="First slide">
       <div class="carousel-caption">
         <h3 class="">MALDIVES</h3>
         
           </div>
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="img/Sydney.jpg" alt="Second slide">
+      <img class="d-block w-100" src="../static/images/Sydney.jpg" alt="Second slide">
       <div class="carousel-caption">
         <h3>SYDNEY</h3>
         
          </div>
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="/img/hawaii.jpg" alt="Third slide">
+      <img class="d-block w-100" src="../static/images/hawaii.jpg" alt="Third slide">
       <div class="carousel-caption">
         <h3>HAWAII</h3>
         
       </div>
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="/img/balii.jpg" alt="fourth slide">
+      <img class="d-block w-100" src="../static/images/balii.jpg" alt="fourth slide">
       <div class="carousel-caption">
         <h3>BALI</h3>
         
       </div>
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="/img/venuce.jpg" alt="fifth slide">
+      <img class="d-block w-100" src="../static/images/venuce.jpg" alt="fifth slide">
       <div class="carousel-caption">
         <h3>VENICE</h3>
         
       </div>
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="/img/santorini.jpg" alt="sixth slide">
+      <img class="d-block w-100" src="../static/images/santorini.jpg" alt="sixth slide">
       <div class="carousel-caption">
         <h3>SANTORINI</h3>
         
       </div>
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="/img/uk.jpg" alt="seventh slide">
+      <img class="d-block w-100" src="../static/images/uk.jpg" alt="seventh slide">
       <div class="carousel-caption">
         <h3>UK</h3>
         
@@ -349,7 +368,7 @@
 <!-- col 2 -->
 <div class="container-fluid col-6">
   <h2 class="fw-normal text-center m-sm-5">Themed Safaris</h2>
-<div id="myCarousel" class="carousel slide bg-inverse w-75 ms-auto me-auto" data-bs-ride="carousel">
+<div id="myCarousel3" class="carousel slide bg-inverse w-75 ms-auto me-auto" data-bs-ride="carousel">
 <ol class="carousel-indicators">
   <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
   <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
@@ -361,49 +380,49 @@
 </ol>
 <div class="carousel-inner" role="listbox">
   <div class="carousel-item active">
-    <img class="d-block w-100" src="img/honeymoon.jpg" alt="First slide">
+    <img class="d-block w-100" src="../static/images/honeymoon.jpg" alt="First slide">
     <div class="carousel-caption">
       <h3 class="">HONEYMOON</h3>
       
         </div>
   </div>
   <div class="carousel-item">
-    <img class="d-block w-100" src="img/adventure.jpg" alt="Second slide">
+    <img class="d-block w-100" src="../static/images/adventure.jpg" alt="Second slide">
     <div class="carousel-caption">
       <h3>ADVENTURE</h3>
       
        </div>
   </div>
   <div class="carousel-item">
-    <img class="d-block w-100" src="/img/valentine.jpg" alt="Third slide">
+    <img class="d-block w-100" src="../static/images/valentine.jpg" alt="Third slide">
     <div class="carousel-caption">
       <h3>VALENTINE</h3>
       
     </div>
   </div>
   <div class="carousel-item">
-    <img class="d-block w-100" src="/img/pexels-yaroslav-shuraev-5608539.jpg" alt="fourth slide">
+    <img class="d-block w-100" src="../static/images/pexels-yaroslav-18*99shuraev-5608539.jpg" alt="fourth slide">
     <div class="carousel-caption">
       <h3>HALLOWEEN</h3>
       
     </div>
   </div>
   <div class="carousel-item">
-    <img class="d-block w-100" src="/img/xmas.jpg" alt="fifth slide">
+    <img class="d-block w-100" src="../static/images/xmas.jpg" alt="fifth slide">
     <div class="carousel-caption">
       <h3>CHRISTMAS</h3>
       
     </div>
   </div>
   <div class="carousel-item">
-    <img class="d-block w-100" src="/img/camping.jpg" alt="sixth slide">
+    <img class="d-block w-100" src="../static/images/camping.jpg" alt="sixth slide">
     <div class="carousel-caption">
       <h3>CAMPING</h3>
       
     </div>
   </div>
   <div class="carousel-item">
-    <img class="d-block w-100" src="/img/nature.jpg" alt="seventh slide">
+    <img class="d-block w-100" src="../static/images/nature.jpg" alt="seventh slide">
     <div class="carousel-caption">
       <h3>NATURE</h3>
       
@@ -447,6 +466,7 @@
               <!-- <p class="text-muted">&copy; 2022</p> -->
             </div>
                 <!-- end of footer -->
-                
+          </footer>
+        </div>
   </body>
 </html>

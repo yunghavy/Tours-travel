@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="main/style.css">
-    <script src="js/bootstrap.js"></script>
+    <link rel="stylesheet" href="../static/css/bootstrap.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <script src="../static/js/bootstrap.js"></script>
 
     <style>
         @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
@@ -179,7 +179,7 @@ button.social-signin.google {
    <!-- navbar -->
    <nav class="navbar navbar-light bg-light fixed-top">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">ERADA</a>
+      <a class="navbar-brand" href="/">ERADA</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLightNavbar" aria-controls="offcanvasLightNavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -191,7 +191,7 @@ button.social-signin.google {
         <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              <a class="nav-link active" aria-current="page" href="/">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#deals">Deals</a>
@@ -223,6 +223,7 @@ button.social-signin.google {
   </nav>
 <!-- end of navbar -->
 <!-- form -->
+   <form action="/signup" method="post">
     <div id="login-box">
         <div class="left">
           <h1>Sign up</h1>
@@ -236,7 +237,7 @@ button.social-signin.google {
         </div>
         
         <div class="right">
-          <span class="loginwith">Sign in with<br />social network</span>
+          <span class="login with">Sign in with<br />social network</span>
           
           <button class="social-signin facebook">Log in with facebook</button>
           <button class="social-signin twitter">Log in with Twitter</button>
@@ -244,6 +245,7 @@ button.social-signin.google {
         </div>
         <div class="or">OR</div>
       </div>
+   </form>
       <!-- end of form -->
 </body>
 </html>
